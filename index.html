@@ -40,7 +40,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Hero immediate visibility fallback */
+        /* Hero is visible by default to ensure button is seen */
         .hero-visible {
             opacity: 1 !important;
             transform: translateY(0) !important;
@@ -63,7 +63,10 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass">
         <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <!-- UPDATE: Logo/Initials -->
             <a href="#" class="text-xl font-bold gradient-text tracking-tighter">JB.</a>
+            
+            <!-- UPDATE: Desktop Navigation Links -->
             <div class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#about" class="text-slate-300 hover:text-white transition-colors">About</a>
                 <a href="#experience" class="text-slate-300 hover:text-white transition-colors">Experience</a>
@@ -71,13 +74,14 @@
                 <a href="#skills" class="text-slate-300 hover:text-white transition-colors">Skills</a>
                 <a href="#contact" class="text-slate-300 hover:text-white transition-colors">Contact</a>
             </div>
+            
             <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black hidden flex-col items-center justify-center space-y-8 text-2xl font-semibold transition-opacity duration-300">
         <button id="close-menu" class="absolute top-5 right-5 p-2 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
@@ -93,34 +97,44 @@
     <header class="pt-40 pb-24 px-4 min-h-[80vh] flex items-center">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="flex-1 space-y-6 text-center md:text-left reveal hero-visible">
+                <!-- UPDATE: Professional Title -->
                 <h2 class="text-cyan-400 font-semibold tracking-widest uppercase text-xs">Senior Engineering Consultant @ Guidehouse</h2>
+                
+                <!-- UPDATE: Your Name -->
                 <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight tracking-tight">
                     Jack Burke
                 </h1>
+                
+                <!-- UPDATE: Short Pitch/Summary -->
                 <p class="text-xl text-slate-400 max-w-xl leading-relaxed mx-auto md:mx-0">
                     Engineering expert solving complex problems through <span class="text-white font-medium">data analysis</span>, <span class="text-white font-medium">federal regulations</span>, and <span class="text-white font-medium">innovative energy modeling</span>.
                 </p>
+                
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
-                    <!-- Link to resume file -->
+                    <!-- UPDATE: Link to your Resume (Ensure file is named resume.pdf in GitHub) -->
                     <a href="resume.pdf" download="Jack_Burke_Resume.pdf" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                         Download Resume
                     </a>
+                    
+                    <!-- UPDATE: Link to your LinkedIn -->
                     <a href="https://www.linkedin.com/in/jackburke22/" target="_blank" class="bg-transparent text-white border border-white/20 px-8 py-4 rounded-full font-semibold hover:bg-white/5 hover:border-white transition-all flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         LinkedIn
                     </a>
                 </div>
             </div>
+            
             <div class="flex-1 flex justify-center reveal hero-visible">
                 <div class="relative w-64 h-64 md:w-80 md:h-80">
                     <div class="absolute inset-0 bg-cyan-500/20 rounded-full blur-3xl"></div>
                     <div class="relative h-full w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900">
-                        <!-- Reverted to the explicit filename identifier to show the image in this preview -->
+                        <!-- UPDATE: Image Filename (Change src to your specific photo filename) -->
                         <img src="profile.jpg" 
                              alt="Jack Burke Profile" 
                              class="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-700" 
-                             loading="eager">
+                             loading="eager"
+                             onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop'">
                     </div>
                 </div>
             </div>
@@ -134,18 +148,20 @@
                 <h3 class="text-3xl font-bold text-white tracking-tighter uppercase">Professional Summary</h3>
                 <div class="w-12 h-1 bg-cyan-500 mx-auto rounded-full"></div>
             </div>
+            
             <div class="space-y-8 text-center md:text-left">
+                <!-- UPDATE: Detailed About/Bio -->
                 <p class="text-xl text-slate-300 leading-relaxed font-light">
                     Engineering Consultant with <span class="text-cyan-400 font-medium">5 years of excellence</span> in solving complex problems through knowledge sharing, independent research, and thorough data analysis. 
                 </p>
                 <p class="text-lg text-slate-400 leading-relaxed">
-                    Proven track record of managing multiple projects under tight timelines to deliver client-ready presentations, federal rulemakings, and novel analytical energy solutions. Specialist in leveraging deep technical expertise to build a more efficient and electrified world.
+                    I have a proven track record of managing multiple projects under tight timelines to deliver client-ready presentations, federal rulemakings, and novel analytical energy solutions. I specialize in leveraging deep technical expertise to build a more efficient and electrified world.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Work Experience -->
+    <!-- Work Experience Timeline -->
     <section id="experience" class="py-32 px-4 bg-black reveal">
         <div class="max-w-4xl mx-auto space-y-16">
             <div class="text-center space-y-4">
@@ -154,43 +170,34 @@
             </div>
             
             <div class="space-y-12">
+                <!-- UPDATE: Work Experience Item (Duplicate this block for more roles) -->
                 <div class="relative pl-8 timeline-border">
                     <div class="absolute w-4 h-4 bg-cyan-500 rounded-full -left-[9px] top-1"></div>
                     <div class="space-y-2">
                         <span class="text-cyan-400 font-bold text-sm tracking-widest uppercase">2023 — Current</span>
                         <h4 class="text-2xl font-bold text-white">Senior Consultant @ Guidehouse</h4>
                         <ul class="text-slate-400 text-sm space-y-2 mt-4 list-disc pl-4 leading-relaxed">
-                            <li>Leading engineering and compliance reviews for multifamily building electrification in Georgia ($3M+ in rebates distributed).</li>
-                            <li>Team expert for SaaS platform implementation (Neighborly Software) for grant management.</li>
-                            <li>Mentoring junior staff and developing QA/QC best practices for engineering workflows.</li>
+                            <li>Leading engineering reviews for building electrification in Georgia ($3M+ distributed).</li>
+                            <li>Team expert for multifamily building energy modeling QA/QC and compliance.</li>
+                            <li>Orchestrating workflows for federal refrigeration engineering analysis models.</li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- Another Work Experience Item -->
                 <div class="relative pl-8 timeline-border">
                     <div class="absolute w-4 h-4 bg-slate-700 rounded-full -left-[9px] top-1"></div>
                     <div class="space-y-2">
                         <span class="text-slate-500 font-bold text-sm tracking-widest uppercase">2021 — 2023</span>
                         <h4 class="text-2xl font-bold text-white">Consultant @ Guidehouse</h4>
-                        <ul class="text-slate-400 text-sm space-y-2 mt-4 list-disc pl-4 leading-relaxed">
-                            <li>Orchestrated refrigeration engineering analysis for DOE Appliance Standards.</li>
-                            <li>Facilitated proprietary manufacturer interviews to collect efficiency technology data.</li>
-                            <li>Authored 6 concurrent federal regulations in the Code of Federal Regulations.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="relative pl-8 timeline-border">
-                    <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-1 shadow-cyan-500/20 shadow-lg"></div>
-                    <div class="space-y-2">
-                        <span class="text-blue-500 font-bold text-sm tracking-widest uppercase">Purdue University</span>
-                        <h4 class="text-2xl font-bold text-white">B.S. Mechanical Engineering</h4>
-                        <p class="text-slate-400 text-sm">GPA: 3.86/4.00 • Minor in Global Engineering • Entrepreneurship Certificate</p>
+                        <p class="text-slate-400 text-sm mt-2">Developed federal regulations and conducted engineering analysis for the Department of Energy (DOE).</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Impact Highlights -->
+    <!-- Impact Cards -->
     <section id="projects" class="py-32 px-4 bg-dark-accent reveal">
         <div class="max-w-6xl mx-auto space-y-16">
             <div class="text-center space-y-4">
@@ -198,12 +205,34 @@
                 <div class="w-12 h-1 bg-cyan-500 mx-auto rounded-full"></div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- UPDATE: Project Card (Copy this structure to add more projects) -->
+                <div class="group bg-neutral-900/40 rounded-3xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-500 p-8 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-cyan-400">
+                            <!-- Icon (You can change this SVG) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Digital Portfolio Orchestration</h4>
+                        <p class="text-slate-400 leading-relaxed text-sm">Collaborated with <span class="text-cyan-400 font-medium">Google Gemini</span> to architect and refine this high-performance personal portfolio. Optimized for CI/CD deployment via <span class="text-white">GitHub Pages</span>.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5">
+                        <!-- UPDATE: Button Link & Text -->
+                        <a href="https://github.com" target="_blank" class="text-cyan-400 font-bold text-xs uppercase tracking-widest hover:text-cyan-300 flex items-center gap-2">
+                            View Repository
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DOE Impact Card -->
                 <div class="group bg-neutral-900/40 rounded-3xl border border-white/5 hover:border-cyan-500/30 transition-all duration-500 p-8 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="text-cyan-400 text-3xl font-bold">01.</div>
+                        <div class="text-cyan-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                        </div>
                         <h4 class="text-xl font-bold text-white">Federal Rulemakings</h4>
-                        <p class="text-slate-400 leading-relaxed text-sm">Managed analysis for 6 concurrent federal regulations for commercial refrigeration and ice makers, published in the Code of Federal Regulations.</p>
+                        <p class="text-slate-400 leading-relaxed text-sm">Managed analysis for 6 concurrent federal regulations for commercial refrigeration and ice makers, resulting in publications within the Code of Federal Regulations.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-white/5">
                         <a href="https://www.regulations.gov" target="_blank" class="text-cyan-400 font-bold text-xs uppercase tracking-widest hover:text-cyan-300 flex items-center gap-2">
@@ -213,11 +242,12 @@
                     </div>
                 </div>
 
+                <!-- GA Impact Card -->
                 <div class="group bg-neutral-900/40 rounded-3xl border border-white/5 hover:border-cyan-500/30 transition-all duration-500 p-8 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="text-cyan-400 text-3xl font-bold">02.</div>
-                        <h4 class="text-xl font-bold text-white">GA Electrification</h4>
-                        <p class="text-slate-400 leading-relaxed text-sm">QA/QC lead for Georgia energy efficiency grants, facilitating over $3 million in upgrades for building electrification.</p>
+                        <div class="text-cyan-400 text-3xl font-bold">GA.</div>
+                        <h4 class="text-xl font-bold text-white">Multifamily Electrification</h4>
+                        <p class="text-slate-400 leading-relaxed text-sm">QA/QC lead for Georgia energy grants, facilitating over $3 million in upgrades for building electrification and efficiency.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-white/5">
                         <a href="https://neighborlysoftware.com/" target="_blank" class="text-cyan-400 font-bold text-xs uppercase tracking-widest hover:text-cyan-300 flex items-center gap-2">
@@ -227,9 +257,12 @@
                     </div>
                 </div>
 
+                <!-- Nature Impact Card -->
                 <div class="group bg-neutral-900/40 rounded-3xl border border-white/5 hover:border-cyan-500/30 transition-all duration-500 p-8 flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="text-cyan-400 text-3xl font-bold">03.</div>
+                        <div class="text-cyan-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </div>
                         <h4 class="text-xl font-bold text-white">Nature Publication</h4>
                         <p class="text-slate-400 leading-relaxed text-sm">Research co-author on flexible fabrics for wearable technology materials testing and property characterization.</p>
                     </div>
@@ -244,14 +277,16 @@
         </div>
     </section>
 
-    <!-- Technical Arsenal -->
+    <!-- Technical Arsenal (Skills) -->
     <section id="skills" class="py-32 px-4 bg-black reveal">
         <div class="max-w-6xl mx-auto space-y-16">
             <div class="text-center space-y-4">
                 <h3 class="text-3xl font-bold text-white tracking-widest uppercase">Technical Arsenal</h3>
                 <div class="w-12 h-1 bg-cyan-500 mx-auto rounded-full"></div>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- UPDATE: Skills Column -->
                 <div class="p-8 bg-zinc-900/40 rounded-3xl border border-white/5">
                     <h5 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-4">Energy Modeling</h5>
                     <ul class="text-slate-400 text-sm space-y-2">
@@ -261,6 +296,7 @@
                         <li>ASHRAE Level II Audits</li>
                     </ul>
                 </div>
+                
                 <div class="p-8 bg-zinc-900/40 rounded-3xl border border-white/5">
                     <h5 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-4">Analysis & Coding</h5>
                     <ul class="text-slate-400 text-sm space-y-2">
@@ -270,6 +306,7 @@
                         <li>Octoparse Web Scraping</li>
                     </ul>
                 </div>
+                
                 <div class="p-8 bg-zinc-900/40 rounded-3xl border border-white/5">
                     <h5 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-4">CAD & Engineering</h5>
                     <ul class="text-slate-400 text-sm space-y-2">
@@ -283,32 +320,34 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact & Footer -->
     <section id="contact" class="py-32 px-4 bg-zinc-950 reveal">
         <div class="max-w-4xl mx-auto text-center space-y-8">
             <h3 class="text-5xl font-bold text-white tracking-tighter">Let's build the future of energy.</h3>
-            <p class="text-slate-400 text-lg">Available for technical strategy and engineering collaboration in the energy space.</p>
+            
             <div class="flex flex-col md:flex-row justify-center items-center gap-8 pt-8 text-sm md:text-base">
-                <a href="mailto:jack.s.burke22@gmail.com" class="text-white hover:text-cyan-400 transition-colors">jack.s.burke22@gmail.com</a>
+                <!-- UPDATE: Your Email -->
+                <a href="mailto:jack.s.burke22@gmail.com" class="text-white hover:text-cyan-400 transition-colors font-medium">jack.s.burke22@gmail.com</a>
                 <span class="text-slate-800 hidden md:block">|</span>
+                <!-- UPDATE: Your Phone Number -->
                 <span class="text-slate-400 font-medium">615-232-4347</span>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-12 px-4 border-t border-white/5 bg-black">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2026 Jack Burke • Senior Engineering Consultant</p>
             <div class="flex gap-6">
                 <a href="https://www.linkedin.com/in/jackburke22/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-sm">LinkedIn</a>
+                <!-- Link to resume -->
                 <a href="resume.pdf" class="text-slate-400 hover:text-white transition-colors text-sm">Resume</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Menu Toggle
+        // NAVIGATION TOGGLE LOGIC
         const menuBtn = document.getElementById('mobile-menu-btn');
         const closeBtn = document.getElementById('close-menu');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -323,7 +362,7 @@
         closeBtn.addEventListener('click', toggleMenu);
         document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', toggleMenu));
 
-        // Intersection Observer for Scroll Reveals
+        // SCROLL REVEAL LOGIC
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -336,7 +375,7 @@
 
         document.querySelectorAll('section, header, .reveal').forEach(el => observer.observe(el));
 
-        // Ensure Hero Section loads immediately
+        // Initial Hero Reveal on Load
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 document.querySelectorAll('.hero-visible').forEach(el => el.classList.add('active'));
@@ -344,5 +383,4 @@
         });
     </script>
 </body>
-
 </html>
